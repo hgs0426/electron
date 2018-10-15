@@ -1,0 +1,19 @@
+<!-- index.html-->
+
+<html>
+  <body>
+    <h1>OS module</h1>
+	<script>
+	  const os = require('os');
+	  document.write(
+	  `
+	    os.arch(): ${os.arch()}
+		<br/>
+		os.platform(): ${os.platform()}
+		<br/>
+		os.totalmem(): ${os.totalmem()}
+	  `
+	  );
+	</script>
+  </body>
+</html>
