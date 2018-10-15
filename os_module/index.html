@@ -5,8 +5,11 @@
     <h1>OS module</h1>
 	<script>
 	  const os = require('os');
+	  const moment = require('moment');
 	  document.write(
 	  `
+	    moment().format(): ${moment().format()};
+	    <br/>
 	    os.arch(): ${os.arch()}
 		<br/>
 		os.platform(): ${os.platform()}
