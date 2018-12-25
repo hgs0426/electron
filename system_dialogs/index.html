@@ -1,0 +1,14 @@
+<!-- index.html -->
+<body> 
+  <script type = "text/javascript"> 
+      alert('hello alert');
+      const {ipcRenderer} = require('electron'); 
+      ipcRenderer.send('openFile', () => { 
+        console.log("Event sent."); 
+      }) 
+      
+      ipcRenderer.on('fileData', (event, data) => { 
+        document.write(data);
+      }) 
+  </script> 
+</body> 
