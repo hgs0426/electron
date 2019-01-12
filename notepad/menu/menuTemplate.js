@@ -1,5 +1,5 @@
 const {shell} = require('electron');
-const {openText} = require('./contollers');
+const {saveText, openText} = require('./contollers');
 
 const menu = [
     {
@@ -7,13 +7,14 @@ const menu = [
       submenu: [
         {
           label: 'Save',
-          click() { }
+          click() { 
+            saveText();
+          }
         },
         {
           label: 'Oepn',
           click() { 
             openText();
-            //shell.openItem('C:/work/electron/README.md');
           }
         },
         {role: 'undo'},

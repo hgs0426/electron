@@ -11,9 +11,14 @@
   <body>
     <script type = "text/javascript">
       const {ipcRenderer} = require('electron'); 
+      ipcRenderer.on('reqFileData', (event, data) => {
+        const contents = document.getElementById('text').value; 
+        ipcRenderer.send('sendContents', contents);
+      });
       ipcRenderer.on('fileData', (event, data) => { 
         document.getElementById('text').value = data;
       });
+      
     </script>
     <textarea name="" id="text"></textarea>
   </body>
