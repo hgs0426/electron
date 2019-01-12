@@ -7,12 +7,14 @@ const menu = [
       submenu: [
         {
           label: 'Save',
+          accelerator: 'CmdOrCtrl+S',
           click() { 
             saveText();
           }
         },
         {
           label: 'Oepn',
+          accelerator: 'CmdOrCtrl+V',
           click() { 
             openText();
           }
@@ -32,7 +34,7 @@ const menu = [
       label: 'View',
       submenu: [
         {
-          label: 'Larger',  
+          label: 'Larger',
           role: 'zoomin'
         },
         {
