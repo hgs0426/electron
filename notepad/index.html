@@ -1,0 +1,25 @@
+<!-- index.html-->
+
+<html>
+  <head>
+    <style>
+      textarea {
+        width:100%; height:100%; resize: none; border: none; outline: none; font-family: Consolas
+      }
+    </style>
+  </head>   
+  <body>
+    <script type = "text/javascript">
+      const {ipcRenderer} = require('electron'); 
+      ipcRenderer.on('reqFileData', (event, data) => {
+        const contents = document.getElementById('text').value; 
+        ipcRenderer.send('sendContents', contents);
+      });
+      ipcRenderer.on('fileData', (event, data) => { 
+        document.getElementById('text').value = data;
+      });
+      
+    </script>
+    <textarea name="" id="text"></textarea>
+  </body>
+</html>
