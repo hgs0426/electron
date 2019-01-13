@@ -14,7 +14,7 @@ const menu = [
         },
         {
           label: 'Oepn',
-          accelerator: 'CmdOrCtrl+V',
+          accelerator: 'CmdOrCtrl+O',
           click() { 
             openText();
           }
